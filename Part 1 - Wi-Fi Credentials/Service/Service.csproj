@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <RootNamespace>Proxyclick.CSharpInterview.Service</RootNamespace>
+        <AssemblyName>Proxyclick.CSharpInterview.Service</AssemblyName>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <WarningsAsErrors>CS8600;CS8602;CS8603;CS8618</WarningsAsErrors>
+    </PropertyGroup>
+
+</Project>

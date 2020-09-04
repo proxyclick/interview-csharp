@@ -1,0 +1,30 @@
+﻿{
+  "object": "visitor",
+  "id": "V-BTLTBC457",
+  "firstname": "Samwell",
+  "lastname": "Tarly",
+  "companyName": "The Wall",
+  "email": "",
+  "phone": "",
+  "mobile": "",
+  "mobileStatus": "UNKNOWN",
+  "firstVisitAt": "2019-12-16T15:52:59Z",
+  "lastVisitAt": "2019-12-16T15:52:59Z",
+  "language": {
+    "code": "en",
+    "name": "English",
+    "displayName": "English"
+  },
+  "pictureOriginal": "https://static.proxyclick.com/d75d8d08/app/img/vm-visitor-avatar.png",
+  "picture24": "https://static.proxyclick.com/d75d8d08/app/img/vm-visitor-avatar.png",
+  "picture36": "https://static.proxyclick.com/d75d8d08/app/img/vm-visitor-avatar.png",
+  "picture64": "https://static.proxyclick.com/d75d8d08/app/img/vm-visitor-avatar.png",
+  "picture128": "https://static.proxyclick.com/d75d8d08/app/img/vm-visitor-avatar.png",
+  "picture192": "https://static.proxyclick.com/d75d8d08/app/img/vm-visitor-avatar.png",
+  "function": null,
+  "about": null,
+  "licensePlate": null,
+  "frequent": true,
+  "attachmentCount": 0,
+  "customFields": null
+}
