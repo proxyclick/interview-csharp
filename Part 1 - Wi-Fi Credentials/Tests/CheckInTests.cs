@@ -30,7 +30,7 @@ namespace Proxyclick.CSharpInterview.Tests
         [Fact]
         public async Task FindVisitorAndGenerateCredentials()
         {
-            var @event = new VisitorEntity()
+            var @event = new VisitorUpdateRequest()
             {
                 Email = "dtargaryen@proxyclick.com"
             };
@@ -44,7 +44,7 @@ namespace Proxyclick.CSharpInterview.Tests
         [Fact]
         public async Task CanFindVisitorAndResolveMismatch()
         {
-            var @event = new VisitorEntity()
+            var @event = new VisitorUpdateRequest()
             {
                 Email = "kdrogo@doth.raki",
                 FirstName = "Khal",
@@ -57,13 +57,13 @@ namespace Proxyclick.CSharpInterview.Tests
             Assert.Equal("81f9d5db", result.Password);
 
             _visitorService.Verify(x =>
-                x.UpdateVisitor(It.Is<VisitorEntity>(s => s.FirstName == "Khal" && s.LastName == "Drogo")), Times.Once);
+                x.UpdateVisitor(It.Is<VisitorUpdateRequest>(s => s.FirstName == "Khal" && s.LastName == "Drogo")), Times.Once);
         }
         
         [Fact]
         public async Task ItShouldStoreCredentialsAndNotStoreItTwice()
         {
-            var @event = new VisitorEntity()
+            var @event = new VisitorUpdateRequest()
             {
                 Email = "jon@snow.com",
             };
@@ -86,7 +86,7 @@ namespace Proxyclick.CSharpInterview.Tests
         [Fact]
         public async Task ItShouldThrowAnExceptionIfVisitorNotFound()
         {
-            var @event = new VisitorEntity()
+            var @event = new VisitorUpdateRequest()
             {
                 Email = "ned@stark.com",
             };

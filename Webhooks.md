@@ -9,7 +9,7 @@ The customer has the following requirements:
 - Get a push notification whenever a visitor checks-in
 - Cancel a visit, where appropriate.
 
-You help the customer suggesting the appropriate API calls to use, and it appears can use the API to resolve all the requirements but one. You discover that there are no easy ways to get alerted for visitor check-in or check-out events.
+You help the customer suggesting the appropriate API calls to use, and _it appears can use the API to resolve all the requirements but one_. You discover that there are no easy ways to get alerted for visitor check-in or check-out events.
 
 ## Assignment: Design a system for sending webhooks
 
@@ -19,7 +19,7 @@ To fulfill the customer's request, a feature needs to be built to alert external
 
 - Webhooks should have a retry policy
 - Webhooks should be configurable by end-users
-- Webhooks need to be secured, a receiver n
+- Webhooks need to be secured, a receiver needs to be able to confirm that the received hook is from the legitimate source.
 
 ## Assumptions
 

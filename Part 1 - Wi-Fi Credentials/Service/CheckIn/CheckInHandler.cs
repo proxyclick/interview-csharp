@@ -11,7 +11,7 @@ namespace Proxyclick.CSharpInterview.Service.CheckIn
         /// </summary>
         /// <param name="visitorEvent">The event of a visitor checking in</param>
         /// <returns>A credentials object, containing the credentials of a visitor</returns>
-        Task<CredentialEntity> HandleCheckIn(VisitorEntity visitorEvent);
+        Task<CredentialEntity> HandleCheckIn(VisitorUpdateRequest visitorEvent);
     }
     public class CheckInHandler : ICheckInHandler
     {
@@ -23,7 +23,7 @@ namespace Proxyclick.CSharpInterview.Service.CheckIn
             _visitorService = visitorService;
             _credentialService = credentialService;
         }
-        public Task<CredentialEntity> HandleCheckIn(VisitorEntity visitorEvent)
+        public Task<CredentialEntity> HandleCheckIn(VisitorUpdateRequest visitorEvent)
         {
             //Make sure to strongly type the return object here 
             throw new System.NotImplementedException();

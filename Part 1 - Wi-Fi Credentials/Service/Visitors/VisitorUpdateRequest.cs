@@ -1,6 +1,6 @@
 ﻿namespace Proxyclick.CSharpInterview.Service.Visitors
 {
-    public class VisitorEntity 
+    public class VisitorUpdateRequest 
     {
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
