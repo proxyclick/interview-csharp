@@ -20,7 +20,7 @@ namespace Proxyclick.CSharpInterview.Tests
         public CheckInTests()
         {
             _visitorService = new Mock<VisitorService>();
-            _visitorService.Setup(x => x.ListVisitors(It.IsAny<string>(), It.IsAny<string>())).CallBase();
+            _visitorService.Setup(x => x.ListVisitors(Constants.CompanyId, It.IsAny<string>(), It.IsAny<string>())).CallBase();
             _credentialService = new Mock<CredentialsService>();
             _credentialService.Setup(x => x.Generate(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
                 .CallBase();

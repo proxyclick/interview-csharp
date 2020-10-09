@@ -16,15 +16,15 @@ namespace Proxyclick.CSharpInterview.Tests
         [Fact]
         public async Task CanFindTyrion()
         {
-            var visitors  = await _visitorService.ListVisitors(email: "tyrion@lannister.com", companyName: null);
+            var visitors  = await _visitorService.ListVisitors(Constants.CompanyId, email: "tyrion@lannister.com", companyName: null);
             var tyrion = Assert.Single(visitors);
             VisitorDataComparer.CompareVisitor(4, tyrion);
         }
 
         [Fact]
-        public async Task CannotFindNedStart()
+        public async Task CannotFindNedStark()
         {
-            var visitors = await _visitorService.ListVisitors(email: "ned@stark.com", companyName: null);
+            var visitors = await _visitorService.ListVisitors(Constants.CompanyId, email: "ned@stark.com", companyName: null);
             Assert.NotNull(visitors);
             Assert.Empty(visitors);
         }
@@ -32,7 +32,7 @@ namespace Proxyclick.CSharpInterview.Tests
         [Fact]
         public async Task CanFindWorkersOnTheWall()
         {
-            var nightWatch = (await _visitorService.ListVisitors(email: null, companyName: "The Wall")).ToList();
+            var nightWatch = (await _visitorService.ListVisitors(Constants.CompanyId, email: null, companyName: "The Wall")).ToList();
             Assert.Equal(2, nightWatch.Count);
             VisitorDataComparer.CompareVisitor(2, nightWatch[0]);
             VisitorDataComparer.CompareVisitor(6, nightWatch[1]);
@@ -41,7 +41,7 @@ namespace Proxyclick.CSharpInterview.Tests
         [Fact]
         public async Task CanFindJonSnow()
         {
-            var visitors = await _visitorService.ListVisitors(email: "jon@snow.com", companyName: "The Wall");
+            var visitors = await _visitorService.ListVisitors(Constants.CompanyId, email: "jon@snow.com", companyName: "The Wall");
             var jon = Assert.Single(visitors);
             VisitorDataComparer.CompareVisitor(2, jon);
         }
