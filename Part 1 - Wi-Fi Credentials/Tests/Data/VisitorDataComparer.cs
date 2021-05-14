@@ -12,7 +12,7 @@ namespace Proxyclick.CSharpInterview.Tests.Data
         public static void CompareVisitor(int visitorId, object visitor)
         {
             var actualVisitorContent = JsonConvert.SerializeObject(visitor).RemoveWhitespace().ToLowerInvariant();
-            var expectedVisitorContent = File.ReadAllText($"Data\\Visitor{visitorId}.json").RemoveWhitespace().ToLowerInvariant();
+            var expectedVisitorContent = File.ReadAllText(Path.Combine("Data", $"Visitor{visitorId}.json")).RemoveWhitespace().ToLowerInvariant();
             Assert.Equal(expectedVisitorContent, actualVisitorContent);
         }
         public static string RemoveWhitespace(this string input)
